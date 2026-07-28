@@ -1,0 +1,6 @@
+{
+  "name": "MedFlex",
+  "description": "سامانه مدیریت و پیگیری هوشمند برنامه‌های توانبخشی و فیزیوتراپی (Smart Rehabilitation)",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
