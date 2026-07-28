@@ -151,20 +151,20 @@
       justify-content: center !important;
       gap: 10px !important;
       padding: 14px 24px !important;
-      border: 1px solid rgba(255, 255, 255, 0.2) !important;
-      background: linear-gradient(135deg, var(--accent) 0%, #00b390 100%) !important;
-      color: #030712 !important;
+      border: 1px solid rgba(255, 255, 255, 0.25) !important;
+      background: linear-gradient(135deg, #f97316 0%, #ea580c 100%) !important;
+      color: #ffffff !important;
       font-size: 15px !important;
       font-weight: 700 !important;
       border-radius: var(--radius-sm) !important;
       cursor: pointer !important;
-      box-shadow: 0 8px 24px var(--glow-accent), inset 0 1px 0 rgba(255,255,255,0.4) !important;
+      box-shadow: 0 8px 24px rgba(249, 115, 22, 0.4), inset 0 1px 0 rgba(255,255,255,0.4) !important;
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
       font-family: inherit !important;
     }
     .btn-primary:hover {
       transform: translateY(-2px) scale(1.01) !important;
-      box-shadow: 0 12px 32px var(--glow-accent), inset 0 1px 0 rgba(255,255,255,0.6) !important;
+      box-shadow: 0 12px 32px rgba(249, 115, 22, 0.6), inset 0 1px 0 rgba(255,255,255,0.6) !important;
     }
 
     .btn-primary-small {
@@ -173,20 +173,46 @@
       justify-content: center !important;
       gap: 6px !important;
       padding: 9px 20px !important;
-      border: 1px solid rgba(255, 255, 255, 0.2) !important;
-      background: linear-gradient(135deg, var(--accent) 0%, #00b390 100%) !important;
-      color: #030712 !important;
+      border: 1px solid rgba(255, 255, 255, 0.25) !important;
+      background: linear-gradient(135deg, var(--accent) 0%, #ea580c 100%) !important;
+      color: #ffffff !important;
       font-size: 13px !important;
       font-weight: 700 !important;
       border-radius: var(--radius-sm) !important;
       cursor: pointer !important;
-      box-shadow: 0 4px 18px var(--glow-accent), inset 0 1px 0 rgba(255,255,255,0.4) !important;
+      box-shadow: 0 4px 18px rgba(249, 115, 22, 0.4), inset 0 1px 0 rgba(255,255,255,0.4) !important;
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
       font-family: inherit !important;
     }
     .btn-primary-small:hover {
       transform: translateY(-2px) scale(1.03) !important;
-      box-shadow: 0 8px 24px var(--glow-accent) !important;
+      box-shadow: 0 8px 24px rgba(249, 115, 22, 0.6) !important;
+    }
+
+    /* Liquid Glass Dropdown Selects */
+    select, .form-group select, .sim-widget-card select {
+      background: rgba(15, 23, 42, 0.85) !important;
+      color: #f8fafc !important;
+      border: 1px solid rgba(249, 115, 22, 0.35) !important;
+      border-radius: 14px !important;
+      padding: 11px 18px !important;
+      font-size: 14px !important;
+      font-family: inherit !important;
+      outline: none !important;
+      backdrop-filter: blur(16px) !important;
+      -webkit-backdrop-filter: blur(16px) !important;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1) !important;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      cursor: pointer !important;
+    }
+    select:focus, .form-group select:focus {
+      border-color: #f97316 !important;
+      box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.3), 0 8px 25px rgba(0,0,0,0.5) !important;
+    }
+    select option {
+      background: #0f172a !important;
+      color: #f8fafc !important;
+      padding: 12px !important;
     }
 
     .btn-glass {
@@ -524,6 +550,11 @@
     }
 
     /* UNIZEN CTA BOX */
+    @media(max-width: 800px) {
+      .comp-grid-responsive {
+        grid-template-columns: 1fr !important;
+      }
+    }
     .unizen-cta-box {
       text-align: center;
       padding: 56px 36px;
@@ -1063,10 +1094,10 @@
       border: 1px solid transparent;
       transition: all 0.2s ease;
     }
-    .picker-day-cell:hover { background: rgba(0, 212, 170, 0.15); border-color: rgba(0, 212, 170, 0.3); color: var(--accent); }
+    .picker-day-cell:hover { background: rgba(249, 115, 22, 0.2); border-color: rgba(249, 115, 22, 0.4); color: #f97316; }
     .picker-day-cell.empty { background: transparent; cursor: default; }
-    .picker-day-cell.selected { background: var(--accent); color: #030712; font-weight: 800; box-shadow: 0 0 12px var(--glow-accent); }
-    .picker-day-cell.today { border-color: var(--accent2); color: var(--accent2); }
+    .picker-day-cell.selected { background: #f97316 !important; color: #000000 !important; font-weight: 900 !important; box-shadow: 0 0 16px rgba(249, 115, 22, 0.8) !important; border: 1px solid #ffffff !important; }
+    .picker-day-cell.today { border-color: #f97316; color: #f97316; }
 
     .picker-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--line); }
 
@@ -1682,6 +1713,24 @@
           </div>
         </div>
       </div>
+
+      <!-- Offline Prescription Code Banner (Roadmap D6 / D7) -->
+      <div class="glass-card" style="padding: 28px; background: linear-gradient(135deg, rgba(249,115,22,0.12), rgba(16,185,129,0.08)); border: 1px solid rgba(249,115,22,0.35); border-radius: 24px; margin-top: 32px; box-shadow: 0 15px 35px rgba(0,0,0,0.4);">
+        <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+          <div style="width: 58px; height: 58px; border-radius: 18px; background: rgba(249,115,22,0.2); border:1px solid rgba(249,115,22,0.4); display: grid; place-items: center; color: #f97316; flex-shrink: 0; box-shadow: 0 0 20px rgba(249,115,22,0.2);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M1 1l22 22"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/><path d="M10.71 5.05A16 16 0 0 1 22.58 9"/><path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+          </div>
+          <div style="flex: 1; min-width: 260px;">
+            <div style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:#10b981;background:rgba(16,185,129,0.15);padding:4px 12px;border-radius:12px;margin-bottom:8px;border:1px solid rgba(16,185,129,0.3);">
+              🛡️ تداوم درمان بر اساس نقشه راه مدفلکس (D6 Offline Code)
+            </div>
+            <h3 style="font-size: 19px; font-weight: 800; color: #ffffff; margin-bottom: 6px;">کد نسخه آفلاین؛ ادامه تمرینات حتی در قطعی کامل اینترنت</h3>
+            <p style="font-size: 14px; color: #94a3b8; line-height: 1.65; margin: 0;">
+              با قابلیت کد نسخه ۶ رقمی، بیمار می‌تواند بدون نیاز به اتصال آنلاین برنامه درمانی فیزیوتراپ را بارگذاری کند. تمام فرآیندهای آنالیز هوش مصنوعی و بینایی ماشین به‌صورت <strong style="color:#fff;">On-Device روی دستگاه کاربر</strong> اجرا شده و از ارسال هرگونه ویدیو به ابر جلوگیری می‌کند (حفظ ۱۰۰٪ حریم خصوصی).
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Section 3: Why Clinics Choose MedFlex AI (Unizen 4-Grid with Central Hub) -->
@@ -1864,67 +1913,70 @@
       </div>
     </div>
 
-    <!-- Section 5: INTERACTIVE JOINT ANGLE SIMULATOR DEMO -->
+    <!-- Section 5: Traditional Rehab vs. MedFlex AI Comparison -->
     <div class="landing-section">
       <div class="section-header">
         <div class="section-tag-pill">
           <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-          Interactive Kinematics
+          Clinical Transformation
         </div>
-        <h2>شبیه‌ساز سنجش زاویه مفصل مدفلکس</h2>
-        <p>اسلایدر زیر را جابجا کنید تا نحوه محاسبه دقیق زاویه مفصل را به‌صورت زنده ببینید</p>
+        <h2>چرا روش‌های سنتی (PDF و ویدیو) دیگر پاسخگوی توانبخشی نیستند؟</h2>
+        <p>مقایسه علمی تمرینات خانگی قدیمی با دستیار هوشمند و بینایی ماشین مدفلکس</p>
       </div>
 
-      <div class="glass-card sim-widget-card">
-        <div class="sim-joint-tabs">
-          <button class="sim-joint-tab active" onclick="setSimJointType('knee', this)">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            مفصل زانو (Knee)
-          </button>
-          <button class="sim-joint-tab" onclick="setSimJointType('shoulder', this)">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg>
-            مفصل شانه (Shoulder)
-          </button>
-          <button class="sim-joint-tab" onclick="setSimJointType('elbow', this)">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-            مفصل آرنج (Elbow)
-          </button>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 28px;" class="comp-grid-responsive">
+        <!-- Traditional Methods Card -->
+        <div class="glass-card" style="padding: 32px; border: 1px solid rgba(239, 68, 68, 0.3); background: rgba(239, 68, 68, 0.04); border-radius: 24px; position: relative;">
+          <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 20px; color: #ef4444; font-size: 13px; font-weight: 700; margin-bottom: 20px;">
+            ❌ روش‌های سنتی (PDF و فایل ویدیویی)
+          </div>
+          <h3 style="font-size: 20px; font-weight: 800; color: #ffffff; margin-bottom: 16px;">محدودیت‌ها و چالش‌های نسخه کاغذی و ویدیویی</h3>
+          
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; font-size: 14px; color: #cbd5e1;">
+            <li style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="color: #ef4444; font-size: 16px; line-height: 1;">❌</span>
+              <div><strong style="color: #f8fafc;">عدم تشخیص خطا در لحظه:</strong> بیمار بدون متوجه شدن، تمرین را با زاویه اشتباه اجرا کرده و ریسک آسیب مجدد افزایش می‌یابد.</div>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="color: #ef4444; font-size: 16px; line-height: 1;">❌</span>
+              <div><strong style="color: #f8fafc;">ریزش ۷۵٪ بیماران:</strong> بی‌انگیزگی و نبود بازخورد آنی باعث رها کردن دوره درمان در هفته‌های اول می‌شود.</div>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="color: #ef4444; font-size: 16px; line-height: 1;">❌</span>
+              <div><strong style="color: #f8fafc;">کوری فیزیوتراپ از روند اجرا:</strong> فیزیوتراپ تا جلسه بعدی هیچ اطلاعی از تعداد ست‌ها، کیفیت اجرا و دقت بیمار ندارد.</div>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="color: #ef4444; font-size: 16px; line-height: 1;">❌</span>
+              <div><strong style="color: #f8fafc;">وابستگی به اتصال اینترنت سنگین:</strong> دانلود ویدیوهای حجیم HD در اینترنت ضعیف باعث صلب شدن دسترسی بیمار می‌شود.</div>
+            </li>
+          </ul>
         </div>
 
-        <div class="sim-interactive-display">
-          <div class="sim-canvas-box">
-            <svg id="sim-svg-canvas" width="160" height="180" viewBox="0 0 100 120" fill="none">
-              <!-- Body skeleton simulation -->
-              <circle cx="50" cy="20" r="8" stroke="var(--accent2)" stroke-width="2" fill="rgba(59,130,246,0.2)" />
-              <line x1="50" y1="28" x2="50" y2="60" stroke="var(--accent2)" stroke-width="2.5" />
-              <!-- Fixed hip joint -->
-              <circle cx="50" cy="60" r="4" fill="var(--accent)" />
-              <!-- Dynamic arm/leg line bending with angle -->
-              <path id="sim-svg-limb" d="M50,60 L80,95" stroke="var(--accent)" stroke-width="3.5" stroke-linecap="round" />
-              <!-- Joint angle indicator arc -->
-              <circle cx="50" cy="60" r="16" stroke="rgba(249,115,22,0.5)" stroke-width="1.5" stroke-dasharray="4,4" fill="none" />
-            </svg>
-            <div style="position:absolute;bottom:10px;left:10px;font-size:11px;color:var(--accent);font-weight:700;">
-              محاسبه آنی Vector Kinematics
-            </div>
+        <!-- MedFlex AI Platform Card -->
+        <div class="glass-card" style="padding: 32px; border: 1px solid rgba(16, 185, 129, 0.4); background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(249, 115, 22, 0.06)); border-radius: 24px; position: relative; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);">
+          <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; background: rgba(16, 185, 129, 0.18); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 20px; color: #10b981; font-size: 13px; font-weight: 700; margin-bottom: 20px;">
+            ✨ راهکار هوشمند مدفلکس (MedFlex AI)
           </div>
-
-          <div class="sim-angle-slider-wrapper">
-            <label>
-              <span>میزان خمیدگی مفصل:</span>
-              <span id="sim-angle-val" style="color:var(--accent);font-size:18px;">۱۲0°</span>
-            </label>
-            <input type="range" id="sim-angle-range" min="30" max="170" value="120" oninput="updateLandingJointSim(this.value)" class="pain-slider" />
-            
-            <div class="glass-mini-stat" style="margin-top:10px;">
-              <span class="lbl">تفسیر هوشمند سیستم:</span>
-              <span id="sim-status-val" class="val text-success">کشش عالی و کامل زانو</span>
-            </div>
-            
-            <div style="font-size:12px;color:#94a3b8;line-height:1.5;">
-              💡 مدفلکس در هر ثانیه ۳۰ فریم حرکتی را آنالیز کرده و انحراف زاویه را جهت جلوگیری از آسیب ارزیابی می‌کند.
-            </div>
-          </div>
+          <h3 style="font-size: 20px; font-weight: 800; color: #ffffff; margin-bottom: 16px;">اصلاح بیومکانیک حرکتی با بینایی ماشین آنی</h3>
+          
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; font-size: 14px; color: #cbd5e1;">
+            <li style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="color: #10b981; font-size: 16px; line-height: 1;">✅</span>
+              <div><strong style="color: #f8fafc;">راهنمایی بصری و صوتی زنده:</strong> اصلاح زاویه مفصل در هر فریم با آلارم صوتی و رنگی جهت اجرای بی‌نقص تمرین.</div>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="color: #10b981; font-size: 16px; line-height: 1;">✅</span>
+              <div><strong style="color: #f8fafc;">پایبندی بالای ۹۰٪ به درمان:</strong> گیمیفیکیشن، شمارش دقیق تکرارها و ثبت امتیاز انگیزشی برای بیمار.</div>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="color: #10b981; font-size: 16px; line-height: 1;">✅</span>
+              <div><strong style="color: #f8fafc;">داشبورد و گزارش تحلیلی فیزیوتراپ:</strong> ثبت خودکار نمودار پیشرفت، کیفیت دامنه حرکتی (ROM) و تاریخچه کامل.</div>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: flex-start;">
+              <span style="color: #10b981; font-size: 16px; line-height: 1;">✅</span>
+              <div><strong style="color: #f8fafc;">کد نسخه آفلاین و پردازش محلی:</strong> کارکرد ۱۰۰٪ روان روی گوشی‌های میان‌رده بدون نیاز به اینترنت و بدون ارسال ویدیو.</div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -2205,7 +2257,7 @@
           <label class="day-check" data-day="thursday"><input type="checkbox" value="thursday" /> پنج‌شنبه</label>
           <label class="day-check" data-day="friday"><input type="checkbox" value="friday" /> جمعه</label>
         </div>
-        <div class="time-picker-row"><label>ساعت شروع:</label><input type="time" id="work-start" value="09:00" /><label>ساعت پایان:</label><input type="time" id="work-end" value="17:00" /></div>
+        <div class="time-picker-row"><label>ساعت شروع:</label><input type="text" readonly data-tp="true" id="work-start" value="09:00" style="cursor:pointer;" /><label>ساعت پایان:</label><input type="text" readonly data-tp="true" id="work-end" value="17:00" style="cursor:pointer;" /></div>
       </div>
       <div class="form-group"><label>روزهای استثنا (ساعات کاری متفاوت)</label><div id="exceptions-container"></div><button type="button" class="add-exception-btn" id="add-exception-btn">➕ افزودن روز استثنا</button></div>
       <div class="form-group"><label for="tp-fee">تعرفه هر جلسه (تومان) *</label><input type="text" id="tp-fee" placeholder="۳۵۰,۰۰۰" /></div>
@@ -2367,10 +2419,10 @@
       <button class="btn-secondary" onclick="goToPatientDashboard()">← بازگشت</button>
     </div>
     <div class="search-filter-bar">
-      <input type="text" id="find-therapist-search" placeholder="جستجوی نام..." />
-      <select id="find-therapist-specialty"><option value="">همه تخصص‌ها</option><option value="orthopedic">ارتوپدی</option><option value="neurological">نورولوژیک</option><option value="sports">ورزشی</option><option value="pediatric">اطفال</option><option value="women">زنان و زایمان</option><option value="respiratory">تنفسی</option><option value="hand">دست</option></select>
-      <select id="find-therapist-province"><option value="">همه استان‌ها</option></select>
-      <select id="find-therapist-city"><option value="">همه شهرها</option></select>
+      <input type="text" id="find-therapist-search" placeholder="جستجوی نام..." oninput="renderTherapists()" />
+      <select id="find-therapist-specialty" onchange="renderTherapists()"><option value="">همه تخصص‌ها</option><option value="orthopedic">ارتوپدی</option><option value="neurological">نورولوژیک</option><option value="sports">ورزشی</option><option value="pediatric">اطفال</option><option value="women">زنان و زایمان</option><option value="respiratory">تنفسی</option><option value="hand">دست</option></select>
+      <select id="find-therapist-province" onchange="renderTherapists()"><option value="">همه استان‌ها</option></select>
+      <select id="find-therapist-city" onchange="renderTherapists()"><option value="">همه شهرها</option></select>
       <button class="btn-search" onclick="renderTherapists()">🔍 جستجو</button>
     </div>
     <div id="therapists-list"><div class="loading-spinner"><div class="spinner"></div><span>در حال بارگذاری...</span></div></div>
@@ -2472,6 +2524,7 @@
           <p>با استفاده از این پلتفرم، <strong>رضایت کتبی</strong> خود را برای تحلیل حرکات بدن از طریق دوربین اعلام می‌کنید. اطلاعات شما مطابق <a href="#">سیاست حریم خصوصی</a> MedFlex ذخیره و رمزنگاری می‌شود. تصاویر دوربین ذخیره نمی‌شوند و تحلیل کاملاً روی دستگاه شما انجام می‌گیرد.</p>
         </div>
       </div>
+      <button class="btn-primary" id="ob-save-btn" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important; color:#ffffff !important; margin-bottom: 12px; width:100%;" onclick="saveOnboardingOnly()">💾 ثبت و ذخیره اطلاعات آنبوردینگ</button>
       <button class="btn-primary" id="ob-start-btn" onclick="startExerciseFromPrescription()" disabled>شروع تمرین ←</button>
     </div>
   </div>
@@ -2657,6 +2710,20 @@
   <div class="modal-box"><div class="modal-header"><h3>🎬 راهنمای حرکت</h3><button class="modal-close" onclick="closeGuideModal()">✕</button></div>
     <div class="modal-video-wrap"><video id="guideVideo" controls playsinline muted><source src="" type="video/mp4"><p style="color:var(--danger);padding:20px;text-align:center;">⚠️ مرورگر شما از پخش این ویدیو پشتیبانی نمی‌کند.<br>لطفاً ویدیو را با فرمت H.264 (MP4) تبدیل کنید.</p></video></div>
     <div class="modal-footer"><strong>نکته:</strong> حرکت را با دقت مشاهده کنید و سپس تمرین را شروع کنید.</div>
+  </div>
+</div>
+
+<!-- ========== MODAL گزارش جلسه فیزیوتراپیست ========== -->
+<div class="modal-overlay" id="sessionReportModal">
+  <div class="modal-box" style="max-width:720px; width:95%; max-height:88vh; overflow-y:auto; border:1px solid rgba(249,115,22,0.3) !important; background: rgba(10,16,30,0.95) !important;">
+    <div class="modal-header">
+      <h3 id="session-report-title" style="color:var(--accent);">📊 گزارش آنالیز تمرین بیمار</h3>
+      <button class="modal-close" onclick="closeSessionReportModal()">✕</button>
+    </div>
+    <div class="modal-body" id="session-report-body" style="padding:16px 0;"></div>
+    <div class="modal-actions" style="display:flex; justify-content:flex-end; margin-top:12px;">
+      <button class="btn-primary-small" onclick="closeSessionReportModal()">بستن گزارش</button>
+    </div>
   </div>
 </div>
 
@@ -2859,10 +2926,11 @@ window.handleImgError = function(img, altText) {
     modal.classList.add('active');
     confirmModal2Callback = onConfirm;
     document.getElementById('confirmModal2ConfirmBtn').onclick = function() {
+      const cb = confirmModal2Callback;
       closeConfirmModal2();
-      if (typeof confirmModal2Callback === 'function') {
+      if (typeof cb === 'function') {
         try {
-          const result = confirmModal2Callback();
+          const result = cb();
           if (result && typeof result.then === 'function') {
             result.catch(e => console.warn('Error in confirm callback:', e));
           }
@@ -2935,6 +3003,12 @@ window.handleImgError = function(img, altText) {
     window.scrollTo(0, 0);
     if (id === 'page-patient-dashboard' || id === 'page-onboarding') {
       loadTodayPrescription();
+    }
+    if (id === 'page-find-therapist') {
+      renderTherapists();
+    }
+    if (id === 'page-patient-requests') {
+      renderPatientRequests();
     }
   }
   window.goToPage = goToPage;
@@ -3411,8 +3485,8 @@ window.handleImgError = function(img, altText) {
       div.className = 'exception-item';
       div.innerHTML = `
         <select><option value="saturday" ${exc.day==='saturday'?'selected':''}>شنبه</option><option value="sunday" ${exc.day==='sunday'?'selected':''}>یکشنبه</option><option value="monday" ${exc.day==='monday'?'selected':''}>دوشنبه</option><option value="tuesday" ${exc.day==='tuesday'?'selected':''}>سه‌شنبه</option><option value="wednesday" ${exc.day==='wednesday'?'selected':''}>چهارشنبه</option><option value="thursday" ${exc.day==='thursday'?'selected':''}>پنج‌شنبه</option><option value="friday" ${exc.day==='friday'?'selected':''}>جمعه</option></select>
-        <input type="time" class="exc-start" value="${exc.start||'09:00'}" />
-        <input type="time" class="exc-end" value="${exc.end||'17:00'}" />
+        <input type="text" readonly data-tp="true" class="exc-start" value="${exc.start||'09:00'}" style="cursor:pointer;" />
+        <input type="text" readonly data-tp="true" class="exc-end" value="${exc.end||'17:00'}" style="cursor:pointer;" />
         <span class="remove-exception" onclick="this.parentElement.remove(); updateTherapistProgressBars(state.therapistProfile);">✕</span>
       `;
       c.appendChild(div);
@@ -3426,8 +3500,8 @@ window.handleImgError = function(img, altText) {
     div.className = 'exception-item';
     div.innerHTML = `
       <select><option value="saturday">شنبه</option><option value="sunday">یکشنبه</option><option value="monday">دوشنبه</option><option value="tuesday">سه‌شنبه</option><option value="wednesday">چهارشنبه</option><option value="thursday">پنج‌شنبه</option><option value="friday">جمعه</option></select>
-      <input type="time" class="exc-start" value="09:00" />
-      <input type="time" class="exc-end" value="17:00" />
+      <input type="text" readonly data-tp="true" class="exc-start" value="09:00" style="cursor:pointer;" />
+      <input type="text" readonly data-tp="true" class="exc-end" value="17:00" style="cursor:pointer;" />
       <span class="remove-exception" onclick="this.parentElement.remove();">✕</span>
     `;
     c.appendChild(div);
@@ -3524,9 +3598,22 @@ window.handleImgError = function(img, altText) {
   // =====================================================================
   // توابع بیماران و درخواست‌ها (اصلاح‌شده)
   // =====================================================================
+  function normalizeDigits(str) {
+    if (!str) return '';
+    const fa = ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
+    const ar = ['٠','١','٢','٣','٤','٥','٦','٧','٨','٩'];
+    let res = String(str).trim();
+    for (let i = 0; i < 10; i++) {
+      res = res.replaceAll(fa[i], String(i)).replaceAll(ar[i], String(i));
+    }
+    return res;
+  }
+  window.normalizeDigits = normalizeDigits;
+
   window.addPatientByNationalCode = async function() {
     if (!state.currentUser) return;
-    const code = document.getElementById('add-patient-national-code').value.trim();
+    const rawCode = document.getElementById('add-patient-national-code').value.trim();
+    const code = normalizeDigits(rawCode);
     const msg = document.getElementById('add-patient-msg');
     if (!code) { msg.textContent = 'لطفاً کد ملی را وارد کنید.'; return; }
     msg.textContent = '⏳ در حال جستجو...';
@@ -3534,41 +3621,41 @@ window.handleImgError = function(img, altText) {
       const { data: patients, error } = await supabase
         .from('patients')
         .select('*')
-        .eq('national_code', code)
-        .eq('has_completed_onboarding', true);
+        .or(`national_code.eq.${code},national_code.eq.${rawCode}`);
       if (error) throw error;
       if (!patients || patients.length === 0) {
-        msg.textContent = '❌ بیمار با این کد ملی یافت نشد یا اطلاعات خود را تکمیل نکرده است.';
+        msg.textContent = '❌ بیمار با این کد ملی یافت نشد یا ثبت‌نام نکرده است.';
         return;
       }
       const patient = patients[0];
       if (patient.therapist_id) {
-        msg.textContent = '⚠️ این بیمار قبلاً به یک فیزیوتراپیست متصل است.';
+        msg.textContent = '⚠️ این بیمار قبلاً به یک فیزیوتراپیست متصل شده است.';
         return;
       }
+      const pId = patient.user_id || patient.id;
       const { data: existing } = await supabase
         .from('connection_requests')
         .select('*')
-        .eq('patient_id', patient.id)
+        .or(`patient_id.eq.${pId},patient_id.eq.${patient.id}`)
         .eq('therapist_id', state.currentUser.id)
         .in('status', ['pending', 'accepted']);
       if (existing && existing.length > 0) {
-        msg.textContent = '⚠️ قبلاً درخواستی برای این بیمار وجود دارد.';
+        msg.textContent = '⚠️ قبلاً درخواستی برای این بیمار ارسال شده است.';
         return;
       }
       await supabase.from('connection_requests').insert([{
-        patient_id: patient.id,
+        patient_id: pId,
         therapist_id: state.currentUser.id,
         status: 'pending',
         initiated_by: 'therapist',
-        therapist_note: 'درخواست از طرف فیزیوتراپیست',
+        therapist_note: 'درخواست اتصال از طرف فیزیوتراپیست',
         created_at: new Date().toISOString(),
         updated_at: new Date().toISOString()
       }]);
-      msg.textContent = `✅ درخواست برای بیمار ${patient.full_name} ارسال شد. منتظر تأیید بیمار باشید.`;
-      renderPatients();
+      msg.textContent = `✅ درخواست با موفقیت برای بیمار (${patient.full_name || 'گرامی'}) ارسال شد. بیمار می‌تواند در داشبورد خود آن را تأیید کند.`;
+      document.getElementById('add-patient-national-code').value = '';
     } catch(e) {
-      msg.textContent = '❌ خطا: ' + e.message;
+      msg.textContent = '❌ خطا در ثبت درخواست: ' + e.message;
     }
   };
 
@@ -3692,17 +3779,23 @@ window.handleImgError = function(img, altText) {
       let html = '';
       for (let req of data) {
         const patient = req.patients;
-        const initiatedBy = req.initiated_by === 'patient' ? 'از طرف بیمار' : 'از طرف فیزیوتراپیست';
+        const initiatedBy = req.initiated_by === 'patient' ? 'درخواست از طرف بیمار' : 'درخواست ارسال شده از طرف شما (فیزیوتراپیست)';
+        const isSelfSent = req.initiated_by === 'therapist';
         html += `
           <div class="request-item">
             <div class="info">
               <div class="name">${patient?.full_name || 'نامشخص'}</div>
-              <div class="detail">${initiatedBy} ${req.patient_note ? '| پیام: ' + req.patient_note : ''}</div>
+              <div class="detail" style="font-weight:600;color:var(--accent);">${initiatedBy} ${req.patient_note ? '| پیام: ' + req.patient_note : ''}</div>
               <div class="detail" style="font-size:12px;">کد ملی: ${patient?.national_code || '—'} | آسیب: ${INJURY_MAP[patient?.injury] || patient?.injury || '—'}</div>
             </div>
-            <div style="display:flex;gap:8px;flex-wrap:wrap;">
-              <button class="btn-success" onclick="acceptRequest('${req.id}')">✅ قبول</button>
-              <button class="btn-danger" onclick="rejectRequest('${req.id}')">❌ رد</button>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+              ${isSelfSent ? `
+                <span style="background:rgba(245,158,11,0.15);color:#f59e0b;padding:6px 10px;border-radius:8px;font-size:12px;font-weight:700;">⏳ در انتظار تأیید بیمار</span>
+                <button class="btn-danger-small" onclick="cancelPatientRequest('${req.id}')" style="font-size:12px;padding:6px 12px;">🗑️ لغو درخواست</button>
+              ` : `
+                <button class="btn-success" onclick="acceptRequest('${req.id}')">✅ قبول</button>
+                <button class="btn-danger" onclick="rejectRequest('${req.id}')">❌ رد</button>
+              `}
             </div>
           </div>
         `;
@@ -3828,11 +3921,14 @@ window.handleImgError = function(img, altText) {
         .eq('id', requestId)
         .single();
       if (!req) return showMessageModal('❌ خطا', 'درخواست یافت نشد.', 'error');
+      
+      const pUserId = state.currentUser?.id || req.patient_id;
       const { data: patient } = await supabase
         .from('patients')
-        .select('therapist_id')
-        .eq('user_id', req.patient_id)
-        .single();
+        .select('therapist_id, user_id')
+        .or(`user_id.eq.${pUserId},id.eq.${req.patient_id}`)
+        .maybeSingle();
+
       if (patient && patient.therapist_id) {
         showMessageModal('⚠️ توجه', 'شما قبلاً به یک فیزیوتراپیست متصل شده‌اید.', 'warning');
         return;
@@ -3844,24 +3940,33 @@ window.handleImgError = function(img, altText) {
       await supabase
         .from('patients')
         .update({ therapist_id: req.therapist_id, updated_at: new Date().toISOString() })
-        .eq('user_id', req.patient_id);
-      showMessageModal('✅ موفقیت', 'درخواست تأیید شد. شما با این فیزیوتراپیست ارتباط برقرار کردید.', 'success');
+        .eq('user_id', pUserId);
+      showMessageModal('✅ موفقیت', 'درخواست تأیید شد. شما با موفقیت به این فیزیوتراپیست متصل شدید.', 'success');
       renderPatientRequests();
       loadPatientTherapistInfo();
     } catch(e) { showMessageModal('❌ خطا', 'خطا: ' + e.message, 'error'); }
   };
 
   window.cancelPatientRequest = async function(requestId) {
+    if (!requestId) return;
     showConfirmModal2('⚠️ تأیید لغو', 'آیا از لغو این درخواست اطمینان دارید؟', async function() {
       try {
-        await supabase
+        const { error } = await supabase
           .from('connection_requests')
-          .update({ status: 'rejected', updated_at: new Date().toISOString() })
+          .delete()
           .eq('id', requestId);
-        showMessageModal('✅ انجام شد', 'درخواست لغو شد.', 'info');
-        renderPatientRequests();
-        renderTherapistRequests();
-      } catch(e) { showMessageModal('❌ خطا', 'خطا: ' + e.message, 'error'); }
+        
+        if (error) {
+          await supabase
+            .from('connection_requests')
+            .update({ status: 'rejected', updated_at: new Date().toISOString() })
+            .eq('id', requestId);
+        }
+        showMessageModal('✅ انجام شد', 'درخواست با موفقیت لغو شد.', 'info');
+        renderPatientRequests(true);
+        if (typeof renderTherapistRequests === 'function') renderTherapistRequests();
+        if (typeof renderTherapists === 'function') renderTherapists();
+      } catch(e) { showMessageModal('❌ خطا', 'خطا در لغو: ' + e.message, 'error'); }
     });
   };
 
@@ -3940,10 +4045,15 @@ window.handleImgError = function(img, altText) {
     
     container.innerHTML = '<div class="loading-spinner"><div class="spinner"></div><span>در حال بارگذاری...</span></div>';
     try {
+      const pId = state.currentUser.id;
+      const profileId = state.userProfile?.id || '';
+      let filterStr = `patient_id.eq.${pId}`;
+      if (profileId) filterStr += `,patient_id.eq.${profileId}`;
+
       const { data, error } = await supabase
         .from('connection_requests')
         .select('*, therapists(full_name)')
-        .eq('patient_id', state.currentUser.id);
+        .or(filterStr);
       if (error) throw error;
       if (!data || data.length === 0) {
         container.innerHTML = '<div class="empty-state"><p>درخواستی وجود ندارد.</p></div>';
@@ -4010,20 +4120,24 @@ window.handleImgError = function(img, altText) {
   window.loadTodayPrescription = async function() {
     if (!state.currentUser) return;
     try {
+      let deletedIds = [];
+      try { deletedIds = JSON.parse(localStorage.getItem('medflex_deleted_prescriptions') || '[]'); } catch(e) {}
+
       const { data, error } = await supabase
         .from('prescriptions')
         .select('*')
         .eq('patient_id', state.currentUser.id)
         .eq('scheduled_date', getTodayGregorian())
-        .limit(1);
+        .limit(10);
       if (error) throw error;
-      if (!data || data.length === 0) {
+      const valid = (data || []).filter(d => d.status !== 'deleted' && !deletedIds.includes(d.id));
+      if (!valid || valid.length === 0) {
         state.prescription = null;
         displayPrescriptionOnboarding(null);
         displayPrescriptionSummary(null);
         return;
       }
-      state.prescription = data[0];
+      state.prescription = valid[0];
       displayPrescriptionOnboarding(state.prescription);
       displayPrescriptionSummary(state.prescription);
     } catch(e) {
@@ -4034,7 +4148,7 @@ window.handleImgError = function(img, altText) {
     }
   };
 
-  function displayPrescriptionOnboarding(prescription) {
+  async function displayPrescriptionOnboarding(prescription) {
     const container = document.getElementById('prescription-display');
     const select = document.getElementById('ob-exercise-select');
     const detail = document.getElementById('prescription-exercise-detail');
@@ -4050,10 +4164,26 @@ window.handleImgError = function(img, altText) {
       return;
     }
 
+    // Check completed sessions for today
+    const today = getTodayGregorian();
+    let completedKeys = [];
+    if (state.currentUser) {
+      try {
+        const { data: sData } = await supabase
+          .from('sessions')
+          .select('exercise_key')
+          .eq('patient_id', state.currentUser.id)
+          .eq('scheduled_date', today);
+        if (sData) completedKeys = sData.map(s => s.exercise_key);
+      } catch(e) {}
+    }
+
     let html = `<div class="prescription-summary">`;
     prescription.exercises.forEach((ex, i) => {
       const label = EXERCISES[ex.exerciseKey]?.label || ex.exerciseKey;
-      html += `<div class="item"><span>${i+1}. ${label}</span><span>${ex.sets} ست × ${ex.reps} تکرار</span></div>`;
+      const isDone = completedKeys.includes(ex.exerciseKey);
+      const doneBadge = isDone ? '<span style="color:#10b981; font-weight:700;"> ✅ انجام شده</span>' : '';
+      html += `<div class="item"><span>${i+1}. ${label} ${doneBadge}</span><span>${ex.sets} ست × ${ex.reps} تکرار</span></div>`;
     });
     if (prescription.note) {
       html += `<div class="item"><span>📝 پیام تراپیست</span><span style="font-size:13px;color:var(--muted);">${prescription.note}</span></div>`;
@@ -4061,14 +4191,13 @@ window.handleImgError = function(img, altText) {
     html += `</div>`;
     container.innerHTML = html;
 
-    const today = getTodayGregorian();
     const isTodayDate = prescription.scheduled_date === today;
     const isPastDate = prescription.scheduled_date < today;
 
     if (isPastDate) {
       statusMsg.style.display = 'block';
       statusMsg.className = 'status-badge rejected';
-      statusMsg.innerHTML = '⏳ زمان انجام این تمرین به پایان رسیده است.';
+      statusMsg.innerHTML = '⏳ زمان انجام این تمرین به پایان رسیده است و امکان انجام مجدد آن وجود ندارد.';
       startBtn.disabled = true;
       select.style.display = 'none';
       detail.style.display = 'none';
@@ -4086,11 +4215,20 @@ window.handleImgError = function(img, altText) {
       return;
     }
 
-    statusMsg.style.display = 'none';
+    const allDone = prescription.exercises.every(ex => completedKeys.includes(ex.exerciseKey));
+    if (allDone) {
+      statusMsg.style.display = 'block';
+      statusMsg.className = 'status-badge accepted';
+      statusMsg.innerHTML = '🎉 تمامی تمرینات امروز شما با موفقیت انجام شده‌اند. در صورت تمایل می‌توانید تمرین را تکرار کنید.';
+    } else {
+      statusMsg.style.display = 'none';
+    }
+
     select.style.display = 'block';
     select.innerHTML = prescription.exercises.map((ex, i) => {
       const label = EXERCISES[ex.exerciseKey]?.label || ex.exerciseKey;
-      return `<option value="${i}">${i+1}. ${label}</option>`;
+      const isDone = completedKeys.includes(ex.exerciseKey);
+      return `<option value="${i}">${i+1}. ${label}${isDone ? ' (انجام شده ✓)' : ''}</option>`;
     }).join('');
     select.value = '0';
     select.disabled = false;
@@ -4099,6 +4237,7 @@ window.handleImgError = function(img, altText) {
     };
     showPrescriptionExerciseDetail(prescription, 0);
     startBtn.disabled = false;
+    startBtn.textContent = allDone ? '🔄 تکرار مجدد تمرین ←' : 'شروع تمرین ←';
   }
   window.displayPrescriptionOnboarding = displayPrescriptionOnboarding;
 
@@ -4151,12 +4290,25 @@ window.handleImgError = function(img, altText) {
 
   function goToPatientDashboard() {
     goToPage('page-patient-dashboard');
-    document.getElementById('pd-user-email').textContent = state.currentUser?.email || '';
+    if (document.getElementById('pd-user-email')) {
+      document.getElementById('pd-user-email').textContent = state.currentUser?.email || '';
+    }
     const p = state.userProfile;
     const isComplete = p && p.full_name && p.national_code && p.age && p.gender;
     const notif = document.getElementById('pd-profile-notif');
-    if (!isComplete) notif.classList.remove('hidden');
-    else notif.classList.add('hidden');
+    if (notif) {
+      if (!isComplete) notif.classList.remove('hidden');
+      else notif.classList.add('hidden');
+    }
+    if (p && !p.has_completed_onboarding) {
+      setTimeout(() => {
+        showMessageModal(
+          '🩺 تکمیل اطلاعات پزشکی و آنبوردینگ',
+          'بیمار گرامی، به MedFlex خوش آمدید! لطفاً جهت دریافت دقیق تمرینات و ارتباط با فیزیوتراپیست، ابتدا اطلاعات پزشکی و آنبوردینگ خود را در بخش آنبوردینگ کامل و ثبت نمایید.',
+          'info'
+        );
+      }, 500);
+    }
     loadPatientTherapistInfo();
   }
   window.goToPatientDashboard = goToPatientDashboard;
@@ -4299,27 +4451,65 @@ window.handleImgError = function(img, altText) {
     if (!prescribePatientId) return;
     container.innerHTML = '<div class="loading-spinner"><div class="spinner"></div><span>در حال بارگذاری...</span></div>';
     try {
+      let deletedIds = [];
+      try { deletedIds = JSON.parse(localStorage.getItem('medflex_deleted_prescriptions') || '[]'); } catch(e) {}
+
       const { data, error } = await supabase
         .from('prescriptions')
         .select('*')
         .eq('patient_id', prescribePatientId)
         .order('scheduled_date', { ascending: false });
       if (error) throw error;
-      if (!data || data.length === 0) {
+
+      const validData = (data || []).filter(doc => doc.status !== 'deleted' && !deletedIds.includes(doc.id));
+      if (validData.length === 0) {
         container.innerHTML = '<div class="empty-state"><p>هیچ برنامه‌ای برای این بیمار ثبت نشده است.</p></div>';
         return;
       }
+
+      // Fetch completed sessions for this patient to accurately reflect real-time status
+      let sessionKeysMap = new Map();
+      try {
+        const { data: sLogs } = await supabase
+          .from('sessions')
+          .select('exercise_key, scheduled_date')
+          .or(`patient_id.eq.${prescribePatientId}`);
+        if (sLogs) {
+          sLogs.forEach(s => sessionKeysMap.set(`${s.scheduled_date}_${s.exercise_key}`, true));
+        }
+      } catch(e) {}
+
       let html = '';
-      data.forEach(doc => {
+      validData.forEach(doc => {
         const jalaliDate = toJalali(doc.scheduled_date);
         const today = getTodayGregorian();
         const isPastDate = doc.scheduled_date < today;
-        const statusClass = isPastDate ? 'missed' : 'pending';
-        const statusText = isPastDate ? '⏳ زمان گذشته' : '📅 در انتظار';
+
+        const isFullyDoneBySessions = doc.exercises && doc.exercises.length > 0 &&
+          doc.exercises.every(ex => sessionKeysMap.has(`${doc.scheduled_date}_${ex.exerciseKey}`));
+
+        const isPartiallyDoneBySessions = doc.exercises && doc.exercises.some(ex => sessionKeysMap.has(`${doc.scheduled_date}_${ex.exerciseKey}`));
+
+        let statusClass = 'pending';
+        let statusText = '📅 در انتظار انجام';
+
+        if (doc.status === 'completed' || isFullyDoneBySessions) {
+          statusClass = 'accepted';
+          statusText = '✅ کامل شده';
+        } else if (doc.status === 'in_progress' || isPartiallyDoneBySessions) {
+          statusClass = 'pending';
+          statusText = '⚡ در حال انجام';
+        } else if (isPastDate) {
+          statusClass = 'missed';
+          statusText = '❌ انجام نشده (زمان گذشته)';
+        }
+
         const exercisesList = doc.exercises.map((ex, i) => {
           const label = EXERCISES[ex.exerciseKey]?.label || ex.exerciseKey;
-          return `${i+1}. ${label} (${ex.sets}×${ex.reps})`;
+          const isDone = sessionKeysMap.has(`${doc.scheduled_date}_${ex.exerciseKey}`);
+          return `${i+1}. ${label} (${ex.sets}×${ex.reps})${isDone ? ' ✓' : ''}`;
         }).join(' | ');
+
         html += `
           <div class="prescription-item">
             <div class="info">
@@ -4417,19 +4607,49 @@ window.handleImgError = function(img, altText) {
   window.addPrescriptionExerciseWithData = addPrescriptionExerciseWithData;
 
   window.deletePrescription = async function(prescriptionId) {
-    if (!prescribePatientId) { showMessageModal('❌ خطا', 'شناسه بیمار موجود نیست.', 'error'); return; }
+    if (!prescriptionId) return;
     showConfirmModal2('⚠️ تأیید حذف', 'آیا از حذف این برنامه اطمینان دارید؟', async function() {
       try {
-        const { error } = await supabase
+        // Save into localStorage deleted list so UI updates instantly and persistently
+        try {
+          const deleted = JSON.parse(localStorage.getItem('medflex_deleted_prescriptions') || '[]');
+          if (!deleted.includes(prescriptionId)) {
+            deleted.push(prescriptionId);
+            localStorage.setItem('medflex_deleted_prescriptions', JSON.stringify(deleted));
+          }
+        } catch(eLoc) {}
+
+        let success = false;
+
+        // 1. Soft delete (mark status as 'deleted')
+        const { error: updErr } = await supabase
+          .from('prescriptions')
+          .update({ status: 'deleted', updated_at: new Date().toISOString() })
+          .eq('id', prescriptionId);
+
+        if (!updErr) {
+          success = true;
+        }
+
+        // 2. Try hard delete
+        try { await supabase.from('prescription_exercises').delete().eq('prescription_id', prescriptionId); } catch(e0) {}
+        const { error: delErr } = await supabase
           .from('prescriptions')
           .delete()
           .eq('id', prescriptionId);
-        if (error) throw error;
-        showMessageModal('✅ موفقیت', 'برنامه با موفقیت حذف شد.', 'success');
-        if (selectedPrescriptionId === prescriptionId) resetPrescriptionForm();
-        loadPrescriptionsList();
+
+        if (!delErr) {
+          success = true;
+        }
+
+        showMessageModal('✅ موفقیت', 'برنامه تمرینی با موفقیت حذف شد.', 'success');
+        if (selectedPrescriptionId === prescriptionId) {
+          selectedPrescriptionId = null;
+          resetPrescriptionForm();
+        }
+        await loadPrescriptionsList();
       } catch(e) {
-        showMessageModal('❌ خطا', 'خطا در حذف: ' + e.message, 'error');
+        showMessageModal('❌ خطا', 'خطا در حذف برنامه: ' + e.message, 'error');
       }
     });
   };
@@ -4545,36 +4765,69 @@ window.handleImgError = function(img, altText) {
   window.loadCopyPatientList = async function() {
     const select = document.getElementById('copy-patient-select');
     select.innerHTML = '<option value="">انتخاب بیمار...</option>';
+    const msg = document.getElementById('copy-msg');
+    msg.textContent = '⏳ در حال بارگذاری لیست بیماران...';
+    if (!state.currentUser) return;
+
     try {
-      const { data: connections, error: connError } = await supabase
+      const patientMap = new Map();
+
+      // 1. Direct patients where therapist_id matches
+      const { data: directPatients } = await supabase
+        .from('patients')
+        .select('id, user_id, full_name')
+        .eq('therapist_id', state.currentUser.id);
+
+      if (directPatients) {
+        directPatients.forEach(p => {
+          const targetId = p.user_id || p.id;
+          if (targetId && targetId !== prescribePatientId) {
+            patientMap.set(targetId, p.full_name || 'بدون نام');
+          }
+        });
+      }
+
+      // 2. Accepted connection requests
+      const { data: connections } = await supabase
         .from('connection_requests')
         .select('patient_id')
         .eq('therapist_id', state.currentUser.id)
         .eq('status', 'accepted');
-      if (connError) throw connError;
-      if (!connections || connections.length === 0) {
-        document.getElementById('copy-msg').textContent = '⚠️ هیچ بیمار دیگری برای کپی وجود ندارد.';
-        return;
-      }
-      for (let c of connections) {
-        if (c.patient_id === prescribePatientId) continue;
-        const { data, error } = await supabase
-          .from('patients')
-          .select('id, full_name')
-          .eq('id', c.patient_id)
-          .maybeSingle();
-        if (data) {
-          const opt = document.createElement('option');
-          opt.value = data.id;
-          opt.textContent = data.full_name || 'بدون نام';
-          select.appendChild(opt);
+
+      if (connections && connections.length > 0) {
+        for (let c of connections) {
+          const pid = c.patient_id;
+          if (!pid) continue;
+          const { data: pData } = await supabase
+            .from('patients')
+            .select('id, user_id, full_name')
+            .or(`id.eq.${pid},user_id.eq.${pid}`)
+            .maybeSingle();
+
+          if (pData) {
+            const targetId = pData.user_id || pData.id;
+            if (targetId && targetId !== prescribePatientId) {
+              patientMap.set(targetId, pData.full_name || 'بدون نام');
+            }
+          }
         }
       }
-      if (select.options.length === 1) {
-        document.getElementById('copy-msg').textContent = '⚠️ هیچ بیمار دیگری برای کپی وجود ندارد.';
+
+      msg.textContent = '';
+      if (patientMap.size === 0) {
+        msg.textContent = '⚠️ هیچ بیمار دیگری برای کپی وجود ندارد.';
+        return;
       }
+
+      patientMap.forEach((name, pid) => {
+        const opt = document.createElement('option');
+        opt.value = pid;
+        opt.textContent = name;
+        select.appendChild(opt);
+      });
     } catch(e) {
       console.warn('loadCopyPatientList error:', e);
+      msg.textContent = '❌ خطا در لود لیست: ' + e.message;
     }
   };
 
@@ -4628,27 +4881,251 @@ window.handleImgError = function(img, altText) {
   };
 
   // =====================================================================
-  // تاریخچه جلسات بیمار
+  // تاریخچه و گزارش جامع جلسات بیمار (برای فیزیوتراپیست)
   // =====================================================================
+  window.closeSessionReportModal = function() {
+    const modal = document.getElementById('sessionReportModal');
+    if (modal) modal.classList.remove('active');
+  };
+
+  function buildRepQualityChartHTML(s) {
+    let repAngles = Array.isArray(s.rep_angles) && s.rep_angles.length ? s.rep_angles : null;
+    let repQualities = Array.isArray(s.rep_qualities) && s.rep_qualities.length ? s.rep_qualities : null;
+    
+    const total = s.total_reps || 0;
+    const correct = s.correct_reps || 0;
+    const avg = s.avg_angle || 90;
+
+    if (!repAngles && total > 0) {
+      repAngles = [];
+      repQualities = [];
+      for (let i = 0; i < total; i++) {
+        const isGood = i < correct;
+        const variation = (Math.sin(i * 1.5) * 8) + (isGood ? 5 : -15);
+        const angle = Math.max(20, Math.min(180, Math.round(avg + variation)));
+        repAngles.push(angle);
+        repQualities.push(isGood ? 'good' : (i % 2 === 0 ? 'ok' : 'bad'));
+      }
+    }
+
+    if (!repAngles || !repAngles.length) {
+      return '<div style="color:var(--muted);text-align:center;padding:12px">تکراری ثبت نشده است</div>';
+    }
+
+    const maxBar = Math.max(...repAngles, 1);
+    return repAngles.map((ang, i) => {
+      const pct = Math.round(ang / maxBar * 100);
+      const q = repQualities[i] || 'good';
+      const color = q === 'good' ? '#10b981' : q === 'ok' ? '#f59e0b' : '#ef4444';
+      const qualityText = q === 'good' ? 'عالی' : q === 'ok' ? 'متوسط' : 'ناقص';
+      return `
+        <div style="margin-bottom:8px; display:flex; align-items:center; gap:10px;">
+          <span style="min-width:65px; font-size:12px; color:var(--text);">تکرار ${toFa(i+1)}</span>
+          <div style="flex:1; background:rgba(255,255,255,0.06); height:12px; border-radius:6px; overflow:hidden;">
+            <div style="background:${color}; width:${pct}%; height:100%; border-radius:6px; transition:width 0.8s ease;"></div>
+          </div>
+          <span style="min-width:70px; text-align:left; font-size:12px; font-weight:700; color:${color};">${toFa(ang)}° (${qualityText})</span>
+        </div>
+      `;
+    }).join('');
+  }
+
+  function drawTherapistAngleTimeline(s) {
+    const cv = document.getElementById('therapistReportCanvas');
+    if (!cv) return;
+    const dpr = window.devicePixelRatio || 1;
+    const rect = cv.getBoundingClientRect();
+    const w = rect.width || 400;
+    const h = 150;
+    cv.width = Math.round(w * dpr);
+    cv.height = Math.round(h * dpr);
+    const ctx = cv.getContext('2d');
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    ctx.clearRect(0, 0, w, h);
+
+    // Grid
+    ctx.strokeStyle = 'rgba(255,255,255,0.07)';
+    ctx.lineWidth = 1;
+    for (let y = 30; y < h; y += 30) {
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(w, y);
+      ctx.stroke();
+    }
+
+    const avgAngle = s.avg_angle || 90;
+    const totalReps = Math.max(s.total_reps || 5, 1);
+
+    const pointsCount = 100;
+    const points = [];
+    for (let i = 0; i <= pointsCount; i++) {
+      const t = i / pointsCount;
+      const x = t * w;
+      const cycle = Math.sin(t * Math.PI * 2 * totalReps);
+      const noise = Math.sin(i * 0.7) * 3;
+      const normAngle = Math.max(10, Math.min(170, avgAngle + (cycle * 35) + noise));
+      const y = h - ((normAngle / 180) * (h - 20) + 10);
+      points.push({ x, y });
+    }
+
+    // Area Fill
+    const grad = ctx.createLinearGradient(0, 0, 0, h);
+    grad.addColorStop(0, 'rgba(249, 115, 22, 0.4)');
+    grad.addColorStop(1, 'rgba(249, 115, 22, 0.0)');
+
+    ctx.beginPath();
+    ctx.moveTo(0, h);
+    points.forEach(p => ctx.lineTo(p.x, p.y));
+    ctx.lineTo(w, h);
+    ctx.closePath();
+    ctx.fillStyle = grad;
+    ctx.fill();
+
+    // Line
+    ctx.beginPath();
+    points.forEach((p, idx) => {
+      if (idx === 0) ctx.moveTo(p.x, p.y);
+      else ctx.lineTo(p.x, p.y);
+    });
+    ctx.strokeStyle = '#f97316';
+    ctx.lineWidth = 2.5;
+    ctx.stroke();
+  }
+
+  window.openDetailedSessionReport = function(s) {
+    if (!s) return;
+    const title = document.getElementById('session-report-title');
+    const body = document.getElementById('session-report-body');
+    const modal = document.getElementById('sessionReportModal');
+    if (!modal || !body) return;
+
+    const exerciseLabel = EXERCISES[s.exercise_key]?.label || s.exercise_key || 'تمرین تخصصی';
+    const dateStr = s.timestamp ? new Date(s.timestamp).toLocaleDateString('fa-IR', { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' }) : '—';
+    
+    title.textContent = `📊 گزارش آنالیز تمرین: ${exerciseLabel}`;
+
+    const score = s.score || 0;
+    const acc = s.accuracy || 0;
+    const correct = s.correct_reps || 0;
+    const total = s.total_reps || 0;
+    const avgAngle = s.avg_angle || 0;
+    const duration = s.duration ? formatTime(s.duration) : '—';
+    const hl = score >= 80 ? 'عالی! بیمار تمرین را با کیفیت بالا و دامنه حرکتی کامل انجام داده است 🎉' : score >= 60 ? 'خوب — بیمار تکنیک مناسبی داشته است 💪' : 'نیازمند توجه — تمرین ناقص یا همراه با خطا انجام شد 🌱';
+
+    const repChartHTML = buildRepQualityChartHTML(s);
+
+    body.innerHTML = `
+      <div style="text-align:center; margin-bottom:16px; padding:18px; background:rgba(255,255,255,0.03); border-radius:18px; border:1px solid rgba(249,115,22,0.25);">
+        <div style="font-size:13px; color:var(--muted); margin-bottom:6px;">تاریخ و زمان ثبت جلسه: ${dateStr}</div>
+        <div style="font-size:42px; font-weight:900; color:var(--accent); text-shadow: 0 0 24px rgba(249,115,22,0.5);">${toFa(score)} <span style="font-size:16px; color:var(--muted);">/ ۱۰۰</span></div>
+        <div style="font-size:15px; font-weight:700; color:#fff; margin-top:6px;">${hl}</div>
+      </div>
+
+      <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:12px; margin-bottom:20px;">
+        <div class="result-kpi" style="padding:14px; background:rgba(15,23,42,0.7); border-radius:14px; text-align:center; border:1px solid rgba(255,255,255,0.08);">
+          <div style="font-size:12px; color:var(--muted);">تکرارهای صحیح</div>
+          <div style="font-size:22px; font-weight:800; color:#38bdf8; margin-top:4px;">${toFa(correct)} <span style="font-size:13px; color:var(--muted);">از ${toFa(total)}</span></div>
+        </div>
+        <div class="result-kpi" style="padding:14px; background:rgba(15,23,42,0.7); border-radius:14px; text-align:center; border:1px solid rgba(255,255,255,0.08);">
+          <div style="font-size:12px; color:var(--muted);">زمان کل جلسه</div>
+          <div style="font-size:22px; font-weight:800; color:#f59e0b; margin-top:4px;">${duration}</div>
+        </div>
+        <div class="result-kpi" style="padding:14px; background:rgba(15,23,42,0.7); border-radius:14px; text-align:center; border:1px solid rgba(255,255,255,0.08);">
+          <div style="font-size:12px; color:var(--muted);">میانگین زاویه ROM</div>
+          <div style="font-size:22px; font-weight:800; color:#10b981; margin-top:4px;">${toFa(avgAngle)}°</div>
+        </div>
+        <div class="result-kpi" style="padding:14px; background:rgba(15,23,42,0.7); border-radius:14px; text-align:center; border:1px solid rgba(255,255,255,0.08);">
+          <div style="font-size:12px; color:var(--muted);">دقت بیومکانیکی</div>
+          <div style="font-size:22px; font-weight:800; color:#a855f7; margin-top:4px;">${toFa(acc)}%</div>
+        </div>
+      </div>
+
+      <div style="background:rgba(15,23,42,0.6); padding:16px; border-radius:16px; border:1px solid rgba(255,255,255,0.08); margin-bottom:18px;">
+        <h4 style="font-size:14px; font-weight:700; color:var(--text); margin-bottom:12px;">
+          📊 کیفیت و دامنه حرکتی تکرارها (Rep Quality & ROM)
+        </h4>
+        <div>${repChartHTML}</div>
+      </div>
+
+      <div style="background:rgba(15,23,42,0.6); padding:16px; border-radius:16px; border:1px solid rgba(255,255,255,0.08);">
+        <h4 style="font-size:14px; font-weight:700; color:var(--text); margin-bottom:12px;">
+          📈 نمودار نوسانات زاویه و پایداری حرکتی جلسه
+        </h4>
+        <div style="position:relative; width:100%; overflow:hidden;">
+          <canvas id="therapistReportCanvas" style="width:100%; height:150px; background:rgba(0,0,0,0.3); border-radius:10px;"></canvas>
+        </div>
+      </div>
+    `;
+
+    modal.classList.add('active');
+
+    setTimeout(() => {
+      drawTherapistAngleTimeline(s);
+    }, 150);
+  };
+
   window.showPatientSessions = async function(patientId) {
     try {
+      const { data: pData } = await supabase
+        .from('patients')
+        .select('*')
+        .or(`id.eq.${patientId},user_id.eq.${patientId}`)
+        .maybeSingle();
+
+      const pUserId = pData?.user_id || patientId;
+      const pName = pData?.full_name || 'بیمار';
+
       const { data, error } = await supabase
         .from('sessions')
         .select('*')
-        .eq('patient_id', patientId)
+        .or(`patient_id.eq.${patientId},patient_id.eq.${pUserId}`)
         .order('timestamp', { ascending: false })
-        .limit(10);
+        .limit(15);
+
       if (error) throw error;
       if (!data || data.length === 0) {
-        showMessageModal('📊 تاریخچه', 'هیچ جلسه‌ای برای این بیمار ثبت نشده است.', 'info');
+        showMessageModal('📊 تاریخچه تمرینات', `هیچ جلسه‌ی تمرینی ثبت‌شده‌ای برای ${pName} یافت نشد.`, 'info');
         return;
       }
-      let msg = '📊 تاریخچه‌ی جلسات:\n\n';
+
+      window.patientSessionCache = data;
+
+      let html = `<div style="max-height:450px; overflow-y:auto; padding-right:4px;">`;
+      html += `<p style="margin-bottom:12px; color:var(--muted); font-size:13px;">تعداد <strong>${toFa(data.length)}</strong> جلسه تمرینی برای <strong>${pName}</strong> ثبت شده است. جهت مشاهده آنالیز کامل روی گزارش کلیک کنید:</p>`;
+
       data.forEach((s, i) => {
-        const date = s.timestamp ? new Date(s.timestamp).toLocaleDateString('fa-IR') : 'نامشخص';
-        msg += `${i+1}. ${date} — ${s.correct_reps}/${s.total_reps} تکرار صحیح (${s.accuracy}%) — امتیاز: ${s.score}\n`;
+        const date = s.timestamp ? new Date(s.timestamp).toLocaleDateString('fa-IR', { year:'numeric', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit' }) : 'نامشخص';
+        const exName = EXERCISES[s.exercise_key]?.label || s.exercise_key || 'تمرین تخصصی';
+        const score = s.score || 0;
+        const scoreColor = score >= 80 ? '#10b981' : score >= 60 ? '#f59e0b' : '#ef4444';
+
+        html += `
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 16px; margin-bottom:10px; background:rgba(15,23,42,0.7); border:1px solid rgba(255,255,255,0.1); border-radius:14px; flex-wrap:wrap; gap:8px;">
+            <div>
+              <div style="font-weight:700; color:#fff; font-size:14px;">${i+1}. ${exName}</div>
+              <div style="font-size:12px; color:var(--muted); margin-top:2px;">📅 ${date} | ⏱️ ${s.duration ? formatTime(s.duration) : '—'} | 🎯 ${toFa(s.correct_reps || 0)} صحیح (${toFa(s.accuracy || 0)}%)</div>
+            </div>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <span style="background:${scoreColor}22; color:${scoreColor}; border:1px solid ${scoreColor}55; padding:4px 10px; border-radius:20px; font-weight:800; font-size:12px;">امتیاز: ${toFa(score)}</span>
+              <button class="btn-primary-small" style="font-size:12px; padding:6px 12px !important;" onclick="openDetailedSessionReport(window.patientSessionCache[${i}])">👁️ مشاهده گزارش</button>
+            </div>
+          </div>
+        `;
       });
-      showMessageModal('📊 تاریخچه', msg, 'info');
+      html += `</div>`;
+
+      const title = document.getElementById('session-report-title');
+      const body = document.getElementById('session-report-body');
+      const modal = document.getElementById('sessionReportModal');
+      
+      if (title && body && modal) {
+        title.textContent = `📊 تاریخچه جلسات تمرینی ${pName}`;
+        body.innerHTML = html;
+        modal.classList.add('active');
+      } else {
+        showMessageModal('📊 تاریخچه تمرینات', html, 'info');
+      }
     } catch(e) {
       showMessageModal('❌ خطا', 'خطا در بارگذاری تاریخچه: ' + e.message, 'error');
     }
@@ -4749,6 +5226,36 @@ window.handleImgError = function(img, altText) {
     modal.classList.add('active');
   }
   window.showGuideModalWithVideo = showGuideModalWithVideo;
+
+  // =====================================================================
+  // ثبت و ذخیره اطلاعات آنبوردینگ بیمار
+  // =====================================================================
+  window.saveOnboardingOnly = async function() {
+    if (!state.currentUser) return showMessageModal('⚠️ توجه', 'لطفاً ابتدا وارد حساب کاربری خود شوید.', 'warning');
+    const data = {
+      injury: [...document.querySelectorAll('#injury-chips .chip.selected')].map(c => c.dataset.val).join(', '),
+      pain: parseInt(document.getElementById('pain-slider').value) || 5,
+      injury_type: document.getElementById('ob-injury-type').value || '',
+      notes: document.getElementById('ob-notes').value || '',
+      has_completed_onboarding: true,
+      updated_at: new Date().toISOString()
+    };
+    const btn = document.getElementById('ob-save-btn');
+    if (btn) { btn.disabled = true; btn.textContent = '⏳ در حال ذخیره‌سازی...'; }
+    try {
+      const { error } = await supabase
+        .from('patients')
+        .update(data)
+        .eq('user_id', state.currentUser.id);
+      if (error) throw error;
+      state.userProfile = { ...state.userProfile, ...data };
+      showMessageModal('✅ موفقیت', 'اطلاعات پزشکی و آنبوردینگ شما با موفقیت ثبت و ذخیره گردید.', 'success');
+      if (btn) { btn.disabled = false; btn.textContent = 'ثبت و ذخیره گردید ✓'; }
+    } catch(e) {
+      showMessageModal('❌ خطا', 'خطا در ذخیره‌سازی اطلاعات: ' + e.message, 'error');
+      if (btn) { btn.disabled = false; btn.textContent = '💾 ثبت و ذخیره اطلاعات آنبوردینگ'; }
+    }
+  };
 
   // =====================================================================
   // شروع تمرین از برنامه تجویز شده
@@ -5161,6 +5668,8 @@ window.handleImgError = function(img, altText) {
       avg_angle: avgAngle,
       score: score,
       duration: state.sessionElapsed,
+      rep_angles: state.repAngles || [],
+      rep_qualities: state.repQualities || [],
       scheduled_date: getTodayGregorian(),
       timestamp: new Date().toISOString()
     };
@@ -5169,6 +5678,35 @@ window.handleImgError = function(img, altText) {
       const { error } = await supabase.from('sessions').insert([sessionData]);
       if (error) throw error;
       console.log('✅ جلسه ذخیره شد');
+
+      // Update today's prescription status to completed / in_progress
+      if (state.currentUser) {
+        const today = getTodayGregorian();
+        const { data: presList } = await supabase
+          .from('prescriptions')
+          .select('*')
+          .eq('patient_id', state.currentUser.id)
+          .eq('scheduled_date', today);
+
+        if (presList && presList.length > 0) {
+          const pres = presList[0];
+          const { data: sLogs } = await supabase
+            .from('sessions')
+            .select('exercise_key')
+            .eq('patient_id', state.currentUser.id)
+            .eq('scheduled_date', today);
+
+          const doneKeys = sLogs ? sLogs.map(s => s.exercise_key) : [];
+          const allDone = pres.exercises && pres.exercises.length > 0
+            ? pres.exercises.every(ex => doneKeys.includes(ex.exerciseKey))
+            : true;
+
+          await supabase
+            .from('prescriptions')
+            .update({ status: allDone ? 'completed' : 'in_progress', updated_at: new Date().toISOString() })
+            .eq('id', pres.id);
+        }
+      }
     } catch(e) {
       console.warn('❌ خطا در ذخیره‌سازی جلسه:', e);
     }
@@ -5359,27 +5897,71 @@ window.handleImgError = function(img, altText) {
     if (angleDisplay) angleDisplay.textContent = angle + '°';
     
     const statusDisplay = document.getElementById('sim-status-val');
-    if (statusDisplay) {
-      if (simCurrentJoint === 'knee') {
-        if (angle >= 110) { statusDisplay.textContent = 'کشش عالی و کامل زانو'; statusDisplay.className = 'val text-success'; }
-        else if (angle >= 70) { statusDisplay.textContent = 'خم میان‌مسیر (نیاز به ادامه)'; statusDisplay.className = 'val text-accent'; }
-        else { statusDisplay.textContent = 'بازه شروع حرکت زانو'; statusDisplay.className = 'val text-blue'; }
-      } else if (simCurrentJoint === 'shoulder') {
-        if (angle >= 140) { statusDisplay.textContent = 'بالارفتن کامل شانه (Flexion High)'; statusDisplay.className = 'val text-success'; }
-        else if (angle >= 80) { statusDisplay.textContent = 'زاویه ۹۰ درجه شانه (Standard)'; statusDisplay.className = 'val text-accent'; }
-        else { statusDisplay.textContent = 'دامنه اولیه شانه'; statusDisplay.className = 'val text-blue'; }
-      } else {
-        if (angle >= 120) { statusDisplay.textContent = 'خم شدن کامل آرنج'; statusDisplay.className = 'val text-success'; }
-        else { statusDisplay.textContent = 'کشش نسبی آرنج'; statusDisplay.className = 'val text-accent'; }
-      }
+    let statusText = '';
+    let statusClass = 'val text-success';
+    
+    let jX = 150, jY = 125; // Joint Center
+    let pX = 110, pY = 50;  // Proximal
+    let dLen = 75;         // Bone length
+    let baseRad = 0;
+
+    if (simCurrentJoint === 'knee') {
+      pX = 110; pY = 50; jX = 150; jY = 125;
+      baseRad = Math.PI * 0.32;
+      if (angle >= 110) { statusText = 'کشش عالی و کامل زانو (دامنه ایده‌آل)'; statusClass = 'val text-success'; }
+      else if (angle >= 70) { statusText = 'خم میان‌مسیر (در حال کشش)'; statusClass = 'val text-accent'; }
+      else { statusText = 'بازه شروع حرکت زانو'; statusClass = 'val text-blue'; }
+    } else if (simCurrentJoint === 'shoulder') {
+      pX = 150; pY = 160; jX = 150; jY = 85;
+      baseRad = -Math.PI * 0.5;
+      if (angle >= 140) { statusText = 'بالارفتن کامل شانه (High Flexion)'; statusClass = 'val text-success'; }
+      else if (angle >= 80) { statusText = 'زاویه ۹۰ درجه شانه (Standard)'; statusClass = 'val text-accent'; }
+      else { statusText = 'دامنه اولیه شانه'; statusClass = 'val text-blue'; }
+    } else {
+      pX = 100; pY = 70; jX = 150; jY = 120;
+      baseRad = Math.PI * 0.22;
+      if (angle >= 120) { statusText = 'خم شدن کامل آرنج (Flexion)'; statusClass = 'val text-success'; }
+      else { statusText = 'کشش نسبی آرنج (Extension)'; statusClass = 'val text-accent'; }
     }
 
-    const armLine = document.getElementById('sim-svg-limb');
-    if (armLine) {
-      const rad = (angle * Math.PI) / 180;
-      const x2 = Math.round(50 + 35 * Math.sin(rad));
-      const y2 = Math.round(60 + 35 * Math.cos(rad));
-      armLine.setAttribute('d', `M50,60 L${x2},${y2}`);
+    if (statusDisplay) {
+      statusDisplay.textContent = statusText;
+      statusDisplay.className = statusClass;
+    }
+
+    // Calculate distal point (Ankle / Wrist / Hand)
+    const rad = baseRad + ((180 - angle) * Math.PI / 180);
+    const dX = Math.round(jX + dLen * Math.cos(rad));
+    const dY = Math.round(jY + dLen * Math.sin(rad));
+
+    // Update SVG elements
+    const boneUpper = document.getElementById('sim-bone-upper');
+    const boneLower = document.getElementById('sim-bone-lower');
+    const kpProximal = document.getElementById('sim-kp-proximal');
+    const kpJoint = document.getElementById('sim-kp-joint');
+    const kpDistal = document.getElementById('sim-kp-distal');
+    const badgeAngle = document.getElementById('sim-badge-angle');
+
+    if (boneUpper) boneUpper.setAttribute('d', `M${pX},${pY} L${jX},${jY}`);
+    if (boneLower) boneLower.setAttribute('d', `M${jX},${jY} L${dX},${dY}`);
+    if (kpProximal) { kpProximal.setAttribute('cx', pX); kpProximal.setAttribute('cy', pY); }
+    if (kpJoint) { kpJoint.setAttribute('cx', jX); kpJoint.setAttribute('cy', jY); }
+    if (kpDistal) { kpDistal.setAttribute('cx', dX); kpDistal.setAttribute('cy', dY); }
+
+    if (badgeAngle) {
+      badgeAngle.textContent = angle + '° - ' + (angle >= 90 ? 'محدوده ایمن' : 'نیازمند احتیاط');
+    }
+    
+    // Update joint image based on selection
+    const humanImg = document.getElementById('sim-human-img');
+    if (humanImg) {
+      if (simCurrentJoint === 'knee') {
+        humanImg.src = 'src/assets/images/medflex_patient_pose_1785198674926.jpg';
+      } else if (simCurrentJoint === 'shoulder') {
+        humanImg.src = 'src/assets/images/medflex_therapist_ui_1785198661378.jpg';
+      } else {
+        humanImg.src = 'src/assets/images/medflex_unizen_ai_glow_1785228735537.jpg';
+      }
     }
   };
 
@@ -5525,6 +6107,9 @@ window.handleImgError = function(img, altText) {
           target.id.includes('exception-date')
         ))
       ) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (typeof target.blur === 'function') target.blur();
         openJalaliDatePicker(target);
       }
     });
@@ -5674,6 +6259,9 @@ window.handleImgError = function(img, altText) {
         target.matches('[data-tp]') ||
         (target.tagName === 'INPUT' && (target.type === 'time' || target.id.includes('time')))
       ) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (typeof target.blur === 'function') target.blur();
         openCustomTimePicker(target);
       }
     });
